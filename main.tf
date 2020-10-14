@@ -10,7 +10,7 @@ provider "random" {
 
 resource "random_pet" "table_name" {}
 
-resource "aws_dynamodb_table" "tfc_example_table" {
+resource "aws_dynamodb_table" "tfc_example_table2" {
   name = "${var.db_table_name}-${random_pet.table_name.id}"
 
   read_capacity  = var.db_read_capacity
